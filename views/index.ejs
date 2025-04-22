@@ -1,0 +1,18 @@
+<div>
+    <h2>All events</h2>
+    <div>
+      <% if (events.length > 0) { %>
+        <% events.forEach(event => { %>
+          <div>
+            <h3><%= event.title %></h3>
+            <p><%= event.description %></p>
+            <a href="/event/<%= event.id %>">
+              Read More
+            </a>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>No events available at the moment.</p>
+      <% } %>
+    </div>
+  </div>
